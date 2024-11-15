@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login - ClassLinker</title>
+    <link rel="stylesheet" href="student-login.css">
+    <script src="teacher-login.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ClassLinker - Teacher Login</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="login">
+        <div class="container">
+            <div class="login-form">
+                <h2>Teacher Login</h2>
+                <form>
+                    <div class="login_input">
+                        <img src="icon/mail.png" width="22px">
+                        <input type="email" id="tchMail" placeholder="Email" class="input" required>
+                    </div><br>
+                    <div class="login_input">
+                        <img src="icon/lock.png" width="23px">
+                        <input type="password" id="pass" placeholder="Your Password" class="input" required>
+                    </div><br>
+                        <input type="checkbox" style="margin-left: 10px;">
+                        <label>Remember me</label>
+                        <a style="float: inline-end;margin-right: 20px; color: blue;">Forgot password?</a>
+                        <br><br>
+                        <button type="submit" onclick="teacherLogin(event)">Log In</button><br><br>
+                        Don't have an account? <a href="teacher-signup.html"style="color: blue;">Sign up</a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ClassLinker. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

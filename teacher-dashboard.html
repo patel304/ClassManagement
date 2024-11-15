@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - ClassLinker</title>
+    <link rel="stylesheet" href="teacher-dashboard.css">
+    <script src="teacher-dashboard.js" defer></script>
+</head>
+<body>
+    <header class="head">
+        <h1>ClassLinker - Teacher Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="teacher-login.html">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="unverified" style="display: none;">
+        <h2>Waiting for Details verification!</h2>
+        <img src="icon/sorry.png" width="200px">
+    </div>
+    <div class="bound" style="display: none;">
+        <section class="profile-info">
+            <img id="tchPic" src="" alt="Profile Picture" class="profile-pic">
+            <h2><span id="tchName"></span></h2>
+            <p><b>Teacher ID: </b><span id="tchId"></span></p><br>
+            <p><b>College Name: </b><span id="insName"></span></p><br>
+            <p><b>Email: </b><span id="tchEmail"></span></p><br>
+            <p><b>Mobile: </b><span id="tchMob"></span></p>
+        </section>
+        <div class="menu-box">
+            <div class="menu">
+                <h2>Attendance</h2>
+                <img src="icon/attendance.png" height="65%" alt="attendance.jpg" onclick="subAttendanceSelect()" style="cursor: pointer;">
+            </div>
+            <div class="menu">
+                <h2>Notes</h2>
+                <img src="icon/notes.png" height="65%" alt="notes.jpg" onclick="subNotesSelect()" style="cursor: pointer;">
+            </div>
+            <div class="menu">
+                <h2>Assignments</h2>
+                <img src="icon/assignment.png" height="65%" alt="Assignment.jpg" onclick="subAssignmentSelect()" style="cursor: pointer;">
+            </div>
+            <div class="menu">
+                <h2>Chat</h2>
+                <img src="icon/chat.png" height="65%" alt="Chat.jpg" onclick="subChatSelect()" style="cursor: pointer;">
+            </div>
+        </div>
+    </div>
+
+    <div id="subSelectAttendance" class="modal">
+        <div class="modal-content">
+            <h2>Select Subject</h2>
+            <form id="select-subject-form">
+                <label for="subDropdown">Subject:</label>
+                <select id="subDropdown" name="subDropdown" required style="cursor: pointer;">
+                </select>
+                <button type="submit" onclick="attendanceSheet(event)" style="background-color: green; color: white; padding: 5px; border: none; border-radius: 5px; cursor: pointer; margin-left: 5%;">Select</button>
+                <button onclick="closeModal(event)" style="background-color: red; color: white; padding: 5px; border: none; border-radius: 5px; cursor: pointer; float: inline-end; margin-right: 5%;">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="subSelectNotes" class="modal">
+        <div class="modal-content">
+            <h2>Select Subject</h2>
+            <form id="select-subject-form">
+                <label for="subDropdown1">Subject:</label>
+                <select id="subDropdown1" name="subDropdown1" required style="cursor: pointer;">
+                </select>
+                <button type="submit" onclick="notes(event)" style="background-color: green; color: white; padding: 5px; border: none; border-radius: 5px; cursor: pointer; margin-left: 5%;">Select</button>
+                <button onclick="closeModal1(event)" style="background-color: red; color: white; padding: 5px; border: none; border-radius: 5px; cursor: pointer; float: inline-end; margin-right: 5%;">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="subSelectAssignment" class="modal">
+        <div class="modal-content">
+            <h2>Select Subject</h2>
+            <form id="select-subject-form">
+                <label for="subDropdown2">Subject:</label>
+                <select id="subDropdown2" name="subDropdown2" required style="cursor: pointer;">
+                </select>
+                <button type="submit" onclick="assignment(event)" style="background-color: green; color: white; padding: 5px; border: none; border-radius: 5px; cursor: pointer; margin-left: 5%;">Select</button>
+                <button onclick="closeModal2(event)" style="background-color: red; color: white; padding: 5px; border: none; border-radius: 5px; cursor: pointer; float: inline-end; margin-right: 5%;">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="subSelectChat" class="modal">
+        <div class="modal-content">
+            <h2>Select Subject</h2>
+            <form id="select-subject-form">
+                <label for="subDropdown3">Subject:</label>
+                <select id="subDropdown3" name="subDropdown3" required style="cursor: pointer;">
+                </select>
+                <button type="submit" onclick="chat(event)" style="background-color: green; color: white; padding: 5px; border: none; border-radius: 5px; cursor: pointer; margin-left: 5%;">Select</button>
+                <button onclick="closeModal3(event)" style="background-color: red; color: white; padding: 5px; border: none; border-radius: 5px; cursor: pointer; float: inline-end; margin-right: 5%;">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ClassLinker. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

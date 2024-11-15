@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassLinker - Attendance Sheet</title>
+    <link rel="stylesheet" href="attendance.css">
+    <script src="attendance_sheet.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>ClassLinker</h1>
+    </header>
+    <div class="heading"><h2>Attendance Sheet (<span id="clsDetails"></span>)</h2></div>
+    <section class="container">
+        <div class="student-info-left">
+            <div class="student-info">
+                <img id="student-pic" src="" alt="Student Picture">
+                <h2>Student Information</h2>
+                <p><b>Scholar ID: </b><span id="student-id"></span></p>
+                <p><b>Name: </b><span id="student-name"></span></p>
+                <div class="attendance-percentage">
+                    <p><b>Percentage = </b><span id="attendance-percentage"></span></p>
+                    <div id="noOfDays" class="percentage-circle green">
+                        <p>Present</p>
+                        <p id="present-count">---</p>
+                        <p>Total days</p>
+                    </div>
+                </div>
+                <div class="status-button">
+                    <button id="present-button">Present</button>
+                    <button id="absent-button">Absent</button>
+                </div>
+            </div>
+        </div>
+        <div class="attendance-right">
+            <table class="attendance-table">
+                <thead>
+                    <tr>
+                        <th>Scholar ID</th>
+                        <th>Pic</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="student-list">
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ClassLinker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
